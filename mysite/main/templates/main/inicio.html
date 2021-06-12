@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <nav>
+        <div class="nav-wrapper blue darken-1">
+          <a href="#" class="brand-logo">Veterinas</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">inicio</a></li>
+            <li><a href="badges.html">contacto</a></li>
+            <li><a href="collapsible.html">registro</a></li>
+          </ul>
+        </div>
+      </nav>
+    <title>veterinarias</title>
+ 
+</head>
+<body>
+
+    <div class="container"> 
+        <div class="row">
+            {% for vet in veterinarias %}
+            <div class="col s12 m6">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">{{vet.veterinaria_nombre}}</span>
+                  <p> {{vet.veterinaria_direccion}}</p>
+                  <p> {{vet.veterinaria_creacion}}</p>
+                  <p> {{vet.veterinaria_descripcion}}</p>
+
+                </div>
+                <div class="card-action white-text center">
+                  <a href="https://i.pinimg.com/originals/1a/59/25/1a592590ea818b1622b7d9e901b9d44c.jpg">ir a imagen </a>
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
